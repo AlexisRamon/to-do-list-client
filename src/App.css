@@ -1,38 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(#263859, #1e2d45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  color: #e0e6fa;
+  margin-bottom: 0.5rem;
+  font-size: 1.75rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Wrapper {
+  background: #3e4b6d;
+  margin-top: 5rem;
+  padding: 2rem;
+  border-radius: 5px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Todo {
+  width: 100%;
+}
+
+.todo-input {
+  outline: none;
+  background: none;
+  border: 1px solid #e0e6fa;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  width: 300px;
+  color: #fff;
+}
+
+.edit-input {
+  outline: none;
+  background: none;
+  border: 1px solid #e0e6fa;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  width: 300px;
+  color: #3e4b6d;
+  font-size: 18px;
+}
+
+.todo-input::placeholder {
+  color: #fff;
+}
+
+.todo-btn {
+  background: #e0e6fa;
+  color: #3e4b6d;
+  border: none;
+  padding: 0.55rem;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.Task {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+  background: #e0e6fa;
+  color: #3e4b6d;
+  padding: 0.75rem 1rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  border: 1px solid #3e4b6d;
+  box-sizing: border-box;
+}
+
+.task-name {
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+.task-icons {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 0.5rem;
+  font-size: 50px;
 }
 
-.App-link {
-  color: #61dafb;
+.fa-pen-square {
+  color: #ff0000;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.fa-trash {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  color: rgb(155, 12, 2);
+}
+
+.Format {
+  margin-bottom: 10px;
+  border: 1px solid #3e4b6d;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.completed {
+  color: rgb(155, 12, 2);
+  text-decoration: line-through;
+}
+
+.edit-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.edit-container {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  border-radius: 5px;
+  cursor: not-allowed;
+}
+
+.P-Task {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.5rem;
+  font-size: 24px;
 }
