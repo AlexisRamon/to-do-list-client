@@ -1,5 +1,7 @@
+/* Importar la fuente de Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
+/* Estilos generales */
 * {
   font-family: 'Poppins', sans-serif;
   margin: 0;
@@ -7,6 +9,7 @@
   box-sizing: border-box;
 }
 
+/* Estilos del cuerpo del documento */
 body {
   background: linear-gradient(#263859, #1e2d45);
   display: flex;
@@ -14,16 +17,19 @@ body {
   align-items: center;
 }
 
+/* Estilos del componente App */
 .App {
   text-align: center;
 }
 
+/* Estilos para los encabezados */
 h1 {
   color: #e0e6fa;
   margin-bottom: 0.5rem;
   font-size: 1.75rem;
 }
 
+/* Estilos del componente Wrapper */
 .Wrapper {
   background: #3e4b6d;
   margin-top: 5rem;
@@ -31,10 +37,12 @@ h1 {
   border-radius: 5px;
 }
 
+/* Estilos del componente Todo */
 .Todo {
   width: 100%;
 }
 
+/* Estilos del input para agregar tareas */
 .todo-input {
   outline: none;
   background: none;
@@ -46,6 +54,7 @@ h1 {
   color: #fff;
 }
 
+/* Estilos del input para editar tareas */
 .edit-input {
   outline: none;
   background: none;
@@ -58,10 +67,12 @@ h1 {
   font-size: 18px;
 }
 
+/* Estilos del texto de placeholder en el input */
 .todo-input::placeholder {
   color: #fff;
 }
 
+/* Estilos del botón para agregar tareas */
 .todo-btn {
   background: #e0e6fa;
   color: #3e4b6d;
@@ -71,6 +82,7 @@ h1 {
   font-size: 14px;
 }
 
+/* Estilos del componente Task */
 .Task {
   display: flex;
   flex-direction: column;
@@ -78,7 +90,7 @@ h1 {
   align-items: center;
   background: #e0e6fa;
   color: #3e4b6d;
-  padding: 0.75rem 1rem;
+  padding: 1rem;
   border-radius: 5px;
   margin-bottom: 1rem;
   cursor: pointer;
@@ -86,63 +98,142 @@ h1 {
   box-sizing: border-box;
 }
 
+/* Estilos del nombre de la tarea */
 .task-name {
   text-align: center;
-  margin-top: 0.5rem;
+  margin-top: 1rem;
+  font-size: 1.2rem;
 }
 
+/* Estilos de los iconos de la tarea */
 .task-icons {
   display: flex;
   justify-content: center;
-  margin-top: 0.5rem;
-  font-size: 50px;
+  margin-top: 1rem;
+  font-size: 2rem;
 }
 
-.fa-pen-square {
-  color: #ff0000;
-}
-
+/* Estilos del ícono de basura */
 .fa-trash {
   margin-left: 0.5rem;
   margin-right: 0.5rem;
   color: rgb(155, 12, 2);
 }
 
+/* Estilos del ícono de check */
+.fa-check {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  color: rgb(8, 136, 25);
+}
+
+/* Estilos del ícono de reloj */
+.fa-clock {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  color: rgb(23, 4, 109);
+}
+
+/* Estilos del ícono de lápiz */
+.fa-pen {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  color: rgb(118, 105, 124);
+}
+
+/* Estilos del componente Format */
 .Format {
-  margin-bottom: 10px;
+  margin-bottom: 1rem;
   border: 1px solid #3e4b6d;
   box-sizing: border-box;
   width: 100%;
 }
 
+/* Estilos para tareas completadas */
 .completed {
   color: rgb(155, 12, 2);
   text-decoration: line-through;
 }
 
+.completed .fa-pen,
+.completed .fa-clock {
+  color: rgb(155, 12, 2);
+}
+
+/* Estilos del overlay para editar tareas */
 .edit-overlay {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  right: 0;
+  bottom: 0;
   background-color: rgba(0, 0, 0, 0.5);
-  z-index: 999;
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 999;
 }
 
+/* Estilos del contenedor de edición */
 .edit-container {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: #e0e6fa;
   padding: 2rem;
   border-radius: 5px;
-  cursor: not-allowed;
+  text-align: center;
+  width: 300px;
 }
 
-.P-Task {
+/* Estilos del título de edición */
+.edit-title {
+  color: #3e4b6d;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Estilos del selector de tiempo personalizado */
+.custom-timepicker {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+/* Estilos de los botones de edición */
+.edit-buttons {
   display: flex;
-  justify-content: center;
-  margin-top: 0.5rem;
-  font-size: 24px;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.edit-button {
+  padding: 8px 12px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.edit-button:hover {
+  background-color: #0056b3;
+}
+
+.edit-button:active {
+  background-color: #003c80;
+}
+
+.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* Estilos del mensaje de error */
+.error {
+  color: #ff0000;
+  font-size: 14px;
+  margin-top: -25px;
+  text-align: center;
 }

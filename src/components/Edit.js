@@ -30,12 +30,12 @@ export const Edit = ({ taskId, taskName }) => {
       <input
         type="text"
         className="edit-input"
-        placeholder="Actualizar tarea"
+        placeholder="Update task"
         value={updatedTask}
         onChange={(event) => setUpdatedTask(event.target.value)}
       />
       <button onClick={handleSubmit} type="submit" className="todo-btn">
-        Actualizar tarea
+        Update task
       </button>
     </form>
   );

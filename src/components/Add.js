@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 
-export const AddTask = () => {
+export const Add = () => {
   const [taskName, setTaskName] = useState("");
+  const [error, setError] = useState("");
 
   const handleInputChange = (event) => {
     setTaskName(event.target.value);
+    setError("");
   };
 
   const handleSubmit = (event) => {
@@ -12,6 +14,7 @@ export const AddTask = () => {
 
     // Verificar que haya texto escrito en el input
     if (taskName.trim() === "") {
+      setError("Please enter a task name.");
       return;
     }
 
@@ -43,6 +46,7 @@ export const AddTask = () => {
       <button type="submit" className="todo-btn">
         Add Task
       </button>
+      {error && <p className="error">{error}</p>}
     </form>
   );
 };
